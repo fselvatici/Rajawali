@@ -27,8 +27,8 @@ public class Renderer extends RajawaliRenderer {
 		ALight light = new DirectionalLight();
 		light.setPower(1);
 		light.setPosition(0, 0, -5);
-		mCamera.setPosition(0, 0, -7);
-		mCamera.setLookAt(0, 0, 0);
+		getCurrentCamera().setPosition(0, 0, -7);
+		getCurrentCamera().setLookAt(0, 0, 0);
 
 		Cube cube = new Cube(1);
 		DiffuseMaterial material = new DiffuseMaterial();
@@ -42,14 +42,14 @@ public class Renderer extends RajawaliRenderer {
 		axis.normalize();
 		mAnim = new RotateAnimation3D(axis, 360);
 		mAnim.setDuration(8000);
-		mAnim.setRepeatCount(Animation3D.INFINITE);
+//		mAnim.setRepeatCount(Animation3D.INFINITE);
 		mAnim.setInterpolator(new AccelerateDecelerateInterpolator());
 		mAnim.setTransformable3D(cube);
 	}
 
 	public void onSurfaceCreated(GL10 gl, EGLConfig config) {
 		super.onSurfaceCreated(gl, config);
-		mAnim.start();
+//		mAnim.start();
 	}
 
 	public void onDrawFrame(GL10 glUnused) {
