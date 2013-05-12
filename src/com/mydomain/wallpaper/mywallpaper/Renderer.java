@@ -33,8 +33,8 @@ public class Renderer extends RajawaliRenderer {
 		Cube cube = new Cube(1);
 		DiffuseMaterial material = new DiffuseMaterial();
 		cube.setMaterial(material);
-		Bitmap texture = BitmapFactory.decodeResource(mContext.getResources(), R.drawable.rajawali_tex);
-		cube.addTexture(mTextureManager.addTexture(texture));
+//		Bitmap texture = BitmapFactory.decodeResource(mContext.getResources(), R.drawable.rajawali_tex);
+//		cube.addTexture(mTextureManager.addTexture(texture));
 		cube.addLight(light);
 		addChild(cube);
 
